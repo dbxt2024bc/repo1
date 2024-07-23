@@ -3,7 +3,7 @@
   <description></description>
   <processSenarioID>0c2507b3-79e1-490a-8077-cdea236dccee</processSenarioID>
   <ID>741464953451292643</ID>
-  <revisionNumber>1721737246120</revisionNumber>
+  <revisionNumber>1721737363367</revisionNumber>
   <groupId>6</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
@@ -28,28 +28,64 @@
   <bestEffortLimit>0</bestEffortLimit>
   <parallelScheduledGroupsLimit>0</parallelScheduledGroupsLimit>
   <businessKeys id="2"/>
-  <processObjects id="3"/>
-  <annotations id="4"/>
-  <edges id="5"/>
-  <properties id="6">
-    <Property id="7">
+  <processObjects id="3">
+    <EventStart id="4">
+      <processModel reference="1"/>
+      <id>101</id>
+      <displayText>Start</displayText>
+      <inAssignments id="5"/>
+      <outAssignments id="6"/>
+      <xpos>440.0</xpos>
+      <ypos>160.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+    </EventStart>
+    <EventEnd id="7">
+      <processModel reference="1"/>
+      <id>102</id>
+      <displayText>Stop</displayText>
+      <inAssignments id="8"/>
+      <outAssignments id="9"/>
+      <xpos>520.0</xpos>
+      <ypos>160.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+      <terminateAll>false</terminateAll>
+    </EventEnd>
+  </processObjects>
+  <annotations id="10"/>
+  <edges id="11">
+    <EdgeSequence id="12">
+      <processModel reference="1"/>
+      <id>104</id>
+      <m__arNode id="13">
+        <EventStart reference="4"/>
+        <EventEnd reference="7"/>
+      </m__arNode>
+      <bentStyle>STRAIGHT</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+  </edges>
+  <properties id="14">
+    <Property id="15">
       <name>CURMSG</name>
       <type class="ArgumentType">message</type>
       <usagePattern>INPUT</usagePattern>
       <description>current message</description>
       <requiredOnInput>false</requiredOnInput>
     </Property>
-    <Property id="8">
+    <Property id="16">
       <name>ERROR</name>
-      <type class="ComplexType" id="9">error</type>
+      <type class="ComplexType" id="17">error</type>
       <usagePattern>LOCAL</usagePattern>
       <description>Error information object</description>
       <requiredOnInput>false</requiredOnInput>
     </Property>
   </properties>
-  <defaultTimerThrottling id="10">
+  <defaultTimerThrottling id="18">
     <processThreshold>0</processThreshold>
     <notificationIntervall>300</notificationIntervall>
   </defaultTimerThrottling>
-  <maxElementId>100</maxElementId>
+  <maxElementId>104</maxElementId>
 </ProcessModel>
