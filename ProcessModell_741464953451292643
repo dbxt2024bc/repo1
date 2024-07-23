@@ -3,7 +3,7 @@
   <description></description>
   <processSenarioID>0c2507b3-79e1-490a-8077-cdea236dccee</processSenarioID>
   <ID>741464953451292643</ID>
-  <revisionNumber>1721737363367</revisionNumber>
+  <revisionNumber>1721737666896</revisionNumber>
   <groupId>6</groupId>
   <autoDeleteFlag>false</autoDeleteFlag>
   <importRevision>0</importRevision>
@@ -35,7 +35,7 @@
       <displayText>Start</displayText>
       <inAssignments id="5"/>
       <outAssignments id="6"/>
-      <xpos>440.0</xpos>
+      <xpos>270.0</xpos>
       <ypos>160.0</ypos>
       <width>20.0</width>
       <height>20.0</height>
@@ -52,40 +52,62 @@
       <height>20.0</height>
       <terminateAll>false</terminateAll>
     </EventEnd>
-  </processObjects>
-  <annotations id="10"/>
-  <edges id="11">
-    <EdgeSequence id="12">
+    <GatewayExclusiveDecision id="10">
       <processModel reference="1"/>
-      <id>104</id>
-      <m__arNode id="13">
+      <id>105</id>
+      <displayText>XOR</displayText>
+      <inAssignments id="11"/>
+      <outAssignments id="12"/>
+      <xpos>410.0</xpos>
+      <ypos>260.0</ypos>
+      <width>40.0</width>
+      <height>40.0</height>
+    </GatewayExclusiveDecision>
+  </processObjects>
+  <annotations id="13"/>
+  <edges id="14">
+    <EdgeSequence id="15">
+      <processModel reference="1"/>
+      <id>107</id>
+      <m__arNode id="16">
         <EventStart reference="4"/>
+        <GatewayExclusiveDecision reference="10"/>
+      </m__arNode>
+      <bentStyle>HV</bentStyle>
+      <defaultEdge>false</defaultEdge>
+      <showAsEdgeLabel>false</showAsEdgeLabel>
+    </EdgeSequence>
+    <EdgeSequence id="17">
+      <processModel reference="1"/>
+      <id>109</id>
+      <m__arNode id="18">
+        <GatewayExclusiveDecision reference="10"/>
         <EventEnd reference="7"/>
       </m__arNode>
-      <bentStyle>STRAIGHT</bentStyle>
+      <bentStyle>VH</bentStyle>
       <defaultEdge>false</defaultEdge>
       <showAsEdgeLabel>false</showAsEdgeLabel>
     </EdgeSequence>
   </edges>
-  <properties id="14">
-    <Property id="15">
+  <properties id="19">
+    <Property id="20">
       <name>CURMSG</name>
       <type class="ArgumentType">message</type>
       <usagePattern>INPUT</usagePattern>
       <description>current message</description>
       <requiredOnInput>false</requiredOnInput>
     </Property>
-    <Property id="16">
+    <Property id="21">
       <name>ERROR</name>
-      <type class="ComplexType" id="17">error</type>
+      <type class="ComplexType" id="22">error</type>
       <usagePattern>LOCAL</usagePattern>
       <description>Error information object</description>
       <requiredOnInput>false</requiredOnInput>
     </Property>
   </properties>
-  <defaultTimerThrottling id="18">
+  <defaultTimerThrottling id="23">
     <processThreshold>0</processThreshold>
     <notificationIntervall>300</notificationIntervall>
   </defaultTimerThrottling>
-  <maxElementId>104</maxElementId>
+  <maxElementId>109</maxElementId>
 </ProcessModel>
