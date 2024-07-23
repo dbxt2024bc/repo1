@@ -1,0 +1,55 @@
+<ProcessModel id="1">
+  <name>pm_test_j</name>
+  <description></description>
+  <processSenarioID>0c2507b3-79e1-490a-8077-cdea236dccee</processSenarioID>
+  <ID>741464953451292643</ID>
+  <revisionNumber>1721737246120</revisionNumber>
+  <groupId>6</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <importRevision>0</importRevision>
+  <isPersistent>false</isPersistent>
+  <useRecovery>false</useRecovery>
+  <isMassData>false</isMassData>
+  <isFifo>false</isFifo>
+  <isGroupedFifo>false</isGroupedFifo>
+  <ensureEventFifo>false</ensureEventFifo>
+  <priority>NORMAL</priority>
+  <priorityDerived>false</priorityDerived>
+  <logLevel>0</logLevel>
+  <deleteLog>false</deleteLog>
+  <redeployPolicy>0</redeployPolicy>
+  <volatilePoicy>0</volatilePoicy>
+  <manualRestart>false</manualRestart>
+  <processTyp>0</processTyp>
+  <clusterMode>0</clusterMode>
+  <distributedTracingRequired>false</distributedTracingRequired>
+  <traceBusinessKeys>false</traceBusinessKeys>
+  <pipelineMode>false</pipelineMode>
+  <bestEffortLimit>0</bestEffortLimit>
+  <parallelScheduledGroupsLimit>0</parallelScheduledGroupsLimit>
+  <businessKeys id="2"/>
+  <processObjects id="3"/>
+  <annotations id="4"/>
+  <edges id="5"/>
+  <properties id="6">
+    <Property id="7">
+      <name>CURMSG</name>
+      <type class="ArgumentType">message</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>current message</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="8">
+      <name>ERROR</name>
+      <type class="ComplexType" id="9">error</type>
+      <usagePattern>LOCAL</usagePattern>
+      <description>Error information object</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+  </properties>
+  <defaultTimerThrottling id="10">
+    <processThreshold>0</processThreshold>
+    <notificationIntervall>300</notificationIntervall>
+  </defaultTimerThrottling>
+  <maxElementId>100</maxElementId>
+</ProcessModel>
